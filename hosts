@@ -1,0 +1,14 @@
+worker1]
+172.31.0.212
+
+[worker2]
+172.31.8.218
+
+[webserver]
+172.31.0.212
+172.31.8.218
+
+[all:children]
+worker1
+worker2
+webserver
