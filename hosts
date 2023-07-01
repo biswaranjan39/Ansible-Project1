@@ -1,12 +1,12 @@
 worker1]
-172.31.0.212
+172.31.0.212 ansible_user=ansiuser
 
 [worker2]
-172.31.8.218
+172.31.8.218 ansible_user=ansiuser
 
 [webserver]
-172.31.0.212
-172.31.8.218
+172.31.0.212 ansible_user=ansiuser
+172.31.8.218 ansible_user=ansiuser
 
 [all:children]
 worker1
