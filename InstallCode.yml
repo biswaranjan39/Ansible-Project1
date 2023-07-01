@@ -1,0 +1,14 @@
+---
+  
+- name: Install Maven and Docker
+  hosts: webserver
+  become: true
+  tasks:
+  - name: update the apt-get repo
+    command: apt-get update
+  - name: Install maven on worker nodes
+    apt: name=maven state=present
+  - name: Install docker on worker nodes
+    apt: name=docker-ce state=present
+  - name: start the docker service
+    service: name=docker state=started
